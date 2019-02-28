@@ -1,0 +1,53 @@
+@import './rem';
+
+$COLOR_STRONG: #FF4B4B; //价格、突出的文字、气泡、删除按钮
+$COLOR_BLOCK: #FF7D46; //按钮、块、标签
+$COLOR_SUB: #FFB320; //其他辅助文字
+$COLOR_HINT: #FFF9E0; //顶部提示条底色
+$COLOR_HINT_EXT: #348BE6; //其他辅助文字，极少
+$COLOR_DARKER: #121212; //列表、正标题
+$COLOR_DARK: #444444; //大面积段落文字、导航坑位默认文字
+$COLOR_GRAY: #666666; //次要信息
+$COLOR_GRAY_LIGHT: #999999; //次要辅助信息
+$COLOR_DISABLED: #CCCCCC; //失效、文本提示字
+$COLOR_LINE: #DDDDDD; //外分隔线（导航栏、标签栏）
+$COLOR_LINE_EXT: #E7E7E7; //内分隔线（内容区）
+$COLOR_BG: #F4F4F4; //APP背景色
+$COLOR_BG_FT: #FAFAFA; //底部栏背景色
+//渐变，用于重要按钮背景色
+$COLOR_GS: #FF6F30; //左，开始
+$COLOR_GE: #FF4B4B; //右，结束
+//渐变，用于辅助按钮背景色
+$COLOR_GS_EXT: #FFBC37; //左，开始
+$COLOR_GE_EXT: #FF9600; //右，结束
+
+
+// colors
+$bg-color-title:        #fff;       // 标题栏背景色
+$bg-color-statusbar:    #fff;       // 状态栏背景色
+$text-color-primary:    #121212;       // 重要文字信息
+$text-color-secondary:  #666;       // 次要文字信息
+$text-color-assistant:  #999;       // 辅助文字信息
+$color-primary:         #ff397e;    // 主前景色,用于菜单，按钮，文字的激活状态
+$color-mute:            #c6c6c6;    // 禁用状态背景色
+$bg-color:              #f4f4f4;    // 主背景色
+$divide-color:          #e7e7e7;    // 分割线色
+$tip-color:             #f66009;    // 重要提示信息
+$bg-color-tag:          #ffa800;    // 标签背景色
+$special-color:         #00baf7;    // 特殊信息颜色
+$mask-color: rgba(0, 0, 0, .7);     // 蒙层背景色
+$popup-color: rgba(0, 0, 0, .3);    // 弹层背景色
+
+// font family
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+// font size
+$font-size-xxxxl:       rem(40);
+$font-size-xxxl:        rem(36);
+$font-size-xxl:         rem(34);
+$font-size-xl:          rem(32);
+$font-size-l:           rem(30);
+$font-size-m:           rem(28);
+$font-size-s:           rem(26);
+$font-size-xs:          rem(24);
+$font-size-xxs:         rem(22);

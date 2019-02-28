@@ -1,0 +1,96 @@
+@import './vars';
+
+// 隐藏滚动条  -webkit- 私有
+::-webkit-scrollbar {
+    display: none;
+}
+
+// IE 9+ 简化盒模型计算，忽略 padding
+
+* {
+    box-sizing: border-box;
+}
+
+::before {
+    box-sizing: border-box;
+}
+
+::after {
+    box-sizing: border-box;
+}
+
+// offsetHeight 为屏幕高度
+html,
+body {
+    height: 100%;
+}
+
+html {
+    // 禁止横行滚动
+    overflow-x: hidden;
+    overflow-y: scroll;
+    // 字体禁选 -webkit-
+    -webkit-user-select: none;
+    // 字体大小 100% -webkit-
+    -webkit-text-size-adjust: 100%;
+    // 字体灰介平滑 -webkit- 私有
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    width: 100%;
+    font-family: $font-family;
+    color: #444;
+    font-size: $font-size-xxs;
+    line-height: 1.5;
+    color: $text-color-primary;
+    background-color: $bg-color;
+}
+
+:focus, body {
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body, button, h1, h2, h3, h4, h5, h6, input, p, textarea, ol, ul ,dl,dt,dd{
+    padding: 0;
+    margin: 0;
+}
+
+button, input, select {
+    font-family: $font-family;
+    font-size: $font-size-xxs;
+    color: $text-color-primary;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    color: $text-color-primary;
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}

@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "rootDirs": ["./src"],
+    "outDir": "builds/dist",
+    //"outDir": "./dist",
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["esnext", "es7", "es6", "es5", "es2015.promise", "es2015.generator", "dom"],
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "alwaysStrict": true,
+    "removeComments": false,
+    "paths": {
+      "@src/*": ["*"]
+    },
+    "skipLibCheck": true,
+    "typeRoots": ["node", "node_modules/@types", "./typings"]
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "webpack"
+  ]
+}
+
+
+/*
+{
+  "compilerOptions": {
+
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+
+
+    "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "rootDirs": ["./src"],
+    "baseUrl": "./src",
+    "paths": {
+      "@src*/
+/*": ["*"]
+    },
+    "jsx": "react",
+    "alwaysStrict": true,
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "lib": ["esnext", "es7", "es6", "es5", "es2015.promise", "es2015.generator", "dom"],
+    "skipLibCheck": true
+  }
+}*/
