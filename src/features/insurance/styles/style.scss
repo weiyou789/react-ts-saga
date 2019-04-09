@@ -1,0 +1,72 @@
+@import '../../../styles/mixin';
+
+$bg-color-title:        #f60;
+
+.insMain{
+  background: #fff;
+  color:#666;
+  .formStepOne{
+    background: #fff;
+    font-size: rem(28);
+    .am-list-item .am-list-line .am-list-content{
+      color: #666;
+      font-size: rem(28);
+    }
+    .am-list-item .am-input-label{
+      color: #666;
+      font-size: rem(28);
+    }
+    .am-list-item .am-input-control .fake-input-container .fake-input-placeholder{
+      color: #ccc;
+      font-size: rem(28);
+    }
+    .am-list-item .am-list-line .am-list-extra{
+      color: #ccc;
+      font-size: rem(28);
+    }
+    .list{
+      height:rem(100);
+      border-top:none;
+    }
+    .lists{
+      width:100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: rem(28);
+      .text{
+        color: #666;
+      }
+      .right{
+        input{
+          border:none;
+          height: rem(50);
+          line-height: 50;
+          text-align: right;
+          background: #FFF;
+          font-size: rem(28);
+          color: #ccc;
+        }
+        .btn{
+          width: rem(150);
+          height: rem(70);
+          text-align: center;
+          line-height: rem(70);
+          border-radius: rem(8);
+          border: 1px solid #ccc;
+          background: #FFF;
+          display: inline-block;
+          margin-left: rem(20);
+        }
+        .btn.active{
+          color:#FFF;
+          border: 1px solid #FF6EA2;
+          background: #FF6EA2;
+        }
+      }
+    }
+  }
+
+}
+
+

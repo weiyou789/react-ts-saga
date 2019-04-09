@@ -5,14 +5,13 @@ import {LocaleProvider} from 'antd';
 import configureStore from './configureStore';
 import RouterMap from './router/index';
 import {AppContainer} from 'react-hot-loader';
-import zhCN from 'antd/lib/locale-provider/zh_CN';
 
 const store = configureStore()
 
 const render = Component => {
     ReactDOM.render(
         <Provider store={store}>
-            <LocaleProvider locale={zhCN}>
+            <LocaleProvider>
                 <AppContainer>
                     <Component/>
                 </AppContainer>

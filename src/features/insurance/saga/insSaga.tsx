@@ -4,7 +4,7 @@ import { INCREMENT_ENTHUSIASM, INCREMENT_ENTHUSIASM_FINISH } from '../redux/acti
 //import { fetchTest } from './services'
 import { fetchInfo } from './services'
 
-function* yieldDemo(action:EnthusiasmAction) {
+function* yieldIns(action:EnthusiasmAction) {
     const res = yield call(fetchInfo, action.Id)
     console.log(112,res)
     //const { data } = demoData
@@ -12,7 +12,7 @@ function* yieldDemo(action:EnthusiasmAction) {
     yield put({ type: INCREMENT_ENTHUSIASM_FINISH, demoData })
 }
 
-export function* watchYieldDemo() {
-    yield takeEvery(INCREMENT_ENTHUSIASM, yieldDemo)
+export function* watchYieldIns() {
+    yield takeEvery(INCREMENT_ENTHUSIASM, yieldIns)
     //alert(454)
 }

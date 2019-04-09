@@ -5,12 +5,8 @@ import loading from './loading';
 
 const RouterList: any[] = [
     {
-        component: () => import('../features/test/testView/Hello'),
-        path: '/'
-    },
-    {
-        component: () => import('../features/test2/testView/Test'),
-        path: '/test'
+        component: () => import('../features/insurance/insView'),
+        path: '/ins'
     },
 ]
 

@@ -1,7 +1,7 @@
 {
     "presets": ["env", "react"],
     "plugins": [
-        ["import", { "libraryName": "antd", "style": true }],
+        ["import", { "libraryName": "antd-mobile", "style": "css" }],
         "transform-class-properties",
         "syntax-dynamic-import",
         "react-hot-loader/babel"

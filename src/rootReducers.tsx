@@ -1,9 +1,7 @@
 import {combineReducers} from "redux";
-import AppReducer2 from "./features/test/redux/reduer";
-import testReducer from "./features/test2/redux/testReducer";
+import insReducer from "./features/insurance/redux/reduer";
 const reducerMap = {
-    ...AppReducer2,
-    ...testReducer
+    ...insReducer
 }
 
 const rootReducer = combineReducers(reducerMap);
