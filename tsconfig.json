@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "rootDirs": ["./src"],
-    "outDir": "builds/dist",
+    //"outDir": "builds/",
     //"outDir": "./dist",
     "module": "esnext",
     "target": "es5",

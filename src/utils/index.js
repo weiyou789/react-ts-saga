@@ -1,3 +1,17 @@
+import 'whatwg-fetch';
+/*
+* 对象转字符串
+* */
+export function dataToString(data) {
+    var array = [];
+    var index = 0;
+    for (var item in data) {
+        if (data[item]) {
+            array[index++] = [item, data[item]];
+        }
+    }
+    return new URLSearchParams(array).toString();
+}
 /*
 * isString
 * */
@@ -88,11 +102,36 @@ export function debounce(fn, delay, param) {
     }, delay);
 }
 /*
-/!*
-* 根据authCode控制按钮显示
-* *!/
-export function filterButtonbyAuth(actionName) {
-    const authList = userStore.userInfo.authCodes.slice()
-    return authList.indexOf(ActionBaseCode[actionName].toString()) > -1
-}*/
+* Fetch封装
+* */
+export function myFetch(url, data, method) {
+    if (method === void 0) { method = 'GET'; }
+    var initObj = {};
+    //url = api + url
+    var dataStr = '';
+    if (data) {
+        dataStr = dataToString(data);
+    }
+    if (method === 'GET') {
+        if (data) {
+            if (url.indexOf('?') > -1) {
+                url += '&' + dataStr;
+            }
+            else {
+                url += '?' + dataStr;
+            }
+        }
+    }
+    else {
+        initObj = {
+            body: dataStr,
+            headers: new Headers({
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            }),
+            method: method
+        };
+    }
+    return fetch(url, initObj).then(function (response) { return response.json(); });
+}
 //# sourceMappingURL=index.js.map

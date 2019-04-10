@@ -10,9 +10,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { combineReducers } from "redux";
-import AppReducer2 from "@src/reducers/demoStore";
-import AppReducer from "@src/reducers/Test";
-var reducerMap = __assign({}, AppReducer2, AppReducer);
+import insReducer from "./features/insurance/redux/reduer";
+var reducerMap = __assign({}, insReducer);
 var rootReducer = combineReducers(reducerMap);
 export default rootReducer;
 //# sourceMappingURL=rootReducers.js.map

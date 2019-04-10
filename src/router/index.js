@@ -1,15 +1,15 @@
 import * as React from 'react';
-import * as Loadable from 'react-loadable';
+import Loadable from 'react-loadable';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import loading from './loading';
 var RouterList = [
     {
-        component: function () { return import('../containers/Hello'); },
-        path: '/'
+        component: function () { return import('../features/insurance/insView'); },
+        path: '/ins'
     },
     {
-        component: function () { return import('../containers/Test'); },
-        path: '/test'
+        component: function () { return import('../features/insurance/insView/trialPage'); },
+        path: '/ins/trial'
     },
 ];
 var RouterMap = function () { return (React.createElement(Router, null,
@@ -18,4 +18,4 @@ var RouterMap = function () { return (React.createElement(Router, null,
             loading: loading
         }) })); })))); };
 export default RouterMap;
-//# sourceMappingURL=routers.js.map
+//# sourceMappingURL=index.js.map

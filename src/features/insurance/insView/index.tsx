@@ -14,6 +14,7 @@ export interface Demo{
 interface Props {
     demoData:Demo
     onIncrement:(Id:string)=>any
+    history?:any
 }
 /*console.log(2)
 const startTime = moment()

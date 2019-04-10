@@ -26,14 +26,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import { all } from 'redux-saga/effects';
-import { watchYieldDemo } from "@src/saga/demo";
-import { watchYieldTest } from "@src/saga/Test";
+import { watchYieldIns } from "./features/insurance/saga/insSaga";
 export default function rootSaga() {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, all([
-                    watchYieldDemo(),
-                    watchYieldTest()
+                    watchYieldIns()
                 ])];
             case 1:
                 _a.sent();
