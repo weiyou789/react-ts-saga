@@ -30,17 +30,20 @@ if (isIPhone) {
     };
 }
 class FillIns extends React.Component<Props>{
-    public onBtn = (cState:string):void => {
+    public onBtn = (cState:string) => {
+        let inverseValue:any = !this.state[cState];
         this.setState({
-            [cState]:!this.state[cState]*1
+            [cState]:inverseValue*1
         })
     }
 
+    public jumpLink = (pathname:string, query:object) => {
+        this.props.history.push({ pathname, query })
+    }
     public state = {
         date: undefined,
         sex:1,
         plan:1,
-        type:'money',
         dataPrive:[
             {
                 label: '100元/周',
@@ -66,7 +69,8 @@ class FillIns extends React.Component<Props>{
             }
         ],
         pValue:[1],
-        cValue:[1]
+        cValue:[1],
+        iValue:""
     }
     public componentDidMount(){
         //console.log(this.props)
@@ -77,7 +81,8 @@ class FillIns extends React.Component<Props>{
         //const { demoData } = this.props
         //const {languageName,enthusiasmLevel} = demoData
 
-        const { sex, plan, dataPrive, dataCycle } = this.state
+        const { sex, plan, dataPrive, dataCycle, date, pValue, cValue, iValue } = this.state
+        const { jumpLink } = this
          return(
             <div className={styles.insMain}>
                 <div className={styles.formStepOne}>
@@ -86,8 +91,10 @@ class FillIns extends React.Component<Props>{
                             mode="date"
                             title="选择日期"
                             extra="请选择"
+                            format="YYYY-MM-DD"
                             value={this.state.date}
                             onChange={date => this.setState({ date })}
+                            onOk={date => this.setState({ date })}
                         >
                             <List.Item className={styles.list} arrow="horizontal">宝宝出生日期</List.Item>
                         </DatePicker>
@@ -144,19 +151,72 @@ class FillIns extends React.Component<Props>{
                         </div>
                         <div style={{'display':`${plan?'none':'block'}`}}>
                             <InputItem
-                                type={this.state.type}
+                                type="money"
                                 className={styles.list}
                                 placeholder="请输入金额500元起"
                                 extra="元"
                                 clear
-                                onChange={(v) => { console.log('onChange', v); }}
-                                onBlur={(v) => { console.log('onBlur', v); }}
+                                onChange={(iValue) => this.setState({iValue})}
+                                onBlur={(iValue) => this.setState({iValue})}
                                 moneyKeyboardWrapProps={moneyKeyboardWrapProps}
                             >保费</InputItem>
                         </div>
                     </List>
                 </div>
+                <div className={styles.trial}>
+                    <p>您为宝贝准备的大学立业费为:<span>12.23</span>万元</p>
+                    <div className={styles.trialIcon} onClick={()=>{ jumpLink('/ins/trial',{sex,plan,date,pValue,cValue,iValue}) }}>
+                        <i className={styles.icon}></i>
+                        <i>目标价值</i>
+                    </div>
 
+                </div>
+                <div className={styles.moneyDetial}>
+                    <dl>
+                        <dt>
+                            领取金额详情
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <span>18-24周岁</span>
+                                    <p>每年可领取xx元，总计xx元</p>
+                                </li>
+                                <li>
+                                    <span>18-24周岁</span>
+                                    <p>每年可领取xx元，总计xx元</p>
+                                </li>
+                                <li>
+                                    <span>18-24周岁</span>
+                                    <p>每年可领取xx元，总计xx元</p>
+                                </li>
+                                <li>
+                                    <span>18-24周岁</span>
+                                    <p>每年可领取xx元，总计xx元</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <div className={styles.tip}>投保次年起可随时提取，上述领取金额为固定领取发放</div>
+                </div>
+
+                <div className={styles.productDetial}>
+                    <span>产品详情</span>
+                    <i>查看详情 ></i>
+                </div>
+
+                <div className={styles.banner}>
+
+                </div>
+
+                <div className={styles.fixedBottom}>
+                    <span>
+                        <i>260</i>元
+                    </span>
+                    <div className="btn">
+                        立即投保
+                    </div>
+                </div>
             </div>
         );
     }

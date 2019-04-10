@@ -8,6 +8,10 @@ const RouterList: any[] = [
         component: () => import('../features/insurance/insView'),
         path: '/ins'
     },
+    {
+        component: () => import('../features/insurance/insView/trialPage'),
+        path: '/ins/trial'
+    },
 ]
 
 const RouterMap = () => (

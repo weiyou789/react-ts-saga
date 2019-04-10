@@ -5,6 +5,8 @@ $bg-color-title:        #f60;
 .insMain{
   background: #fff;
   color:#666;
+  font-size: rem(28);
+  padding-bottom: rem(140);
   .formStepOne{
     background: #fff;
     font-size: rem(28);
@@ -67,6 +69,136 @@ $bg-color-title:        #f60;
     }
   }
 
-}
+  .trial{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(50) rem(30);
+    .trialIcon{
+      text-align: center;
+      .icon{
+        width: rem(32);
+        height: rem(32);
+        margin: 0 auto;
+        background:url(./images/trialicon.png) no-repeat;
+        background-size: cover;
+      }
+    }
+    i{
+      color: #2276e4;
+      font-size: rem(24);
+      display: block;
+    }
+    p{
+      flex: 1;
+      font-weight: bold;
+      color: #333;
+      span{
+        font-size: rem(48);
+        color: #ff6ea2;
+        font-weight: 600;
+      }
+    }
+  }
 
+  .moneyDetial{
+    width: rem(700);
+    padding: rem(30);
+    margin: 0 auto;
+    border-radius: rem(8);
+    box-shadow: 0 0 8px 0;
+    .tip{
+      border-radius: rem(4);
+      font-size: rem(24);
+      line-height: rem(60);
+      height: rem(60);
+      text-align: center;
+      background: #f4f4f4;
+      width: rem(640);
+      margin: rem(10) auto 0;
+    }
+    dl{
+      color: #333;
+    }
+    dt{
+      font-size: rem(32);
+      line-height: rem(40);
+      font-weight: 700;
+
+    }
+    li{
+      display: flex;
+      line-height: rem(40);
+      justify-content: space-between;
+      padding: rem(10) 0;
+      span{
+        text-align: left;
+        color: #666;
+      }
+      p{
+        text-align: right;
+      }
+    }
+  }
+  .productDetial{
+    width: rem(700);
+    padding: rem(30);
+    margin: rem(30) auto;
+    border-radius: rem(8);
+    box-shadow: 0 0 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: rem(88);
+    span{
+      flex: 1;
+      font-size: rem(32);
+      font-weight: 700;
+      color: #333;
+    }
+    i{
+      color: #999;
+      font-size: rem(28);
+    }
+  }
+
+  .banner{
+    width: rem(700);
+    height: rem(200);
+    margin: 0 auto;
+    background: #E7E5E6;
+  }
+
+
+}
+.fixedBottom{
+  box-shadow: 0 0 4px 0;
+  width: 100%;
+  height: rem(120);
+  padding: 0 rem(30);
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span{
+    i{
+      font-size: rem(48);
+      color: #FF397E;
+      line-height: rem(44);
+      font-weight: 700;
+    }
+  }
+  .btn{
+    width: rem(250);
+    height: rem(80);
+    background: #FF6EA2;
+    border-radius: rem(8);
+    color: #fff;
+    line-height: rem(80);
+    text-align: center;
+  }
+}
 
