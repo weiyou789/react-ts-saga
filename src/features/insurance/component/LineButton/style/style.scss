@@ -1,0 +1,14 @@
+@import '../../../../../styles/mixin';
+
+$bg-color-title:        #f60;
+
+
+.wrap{
+  color:#666;
+  .title{
+    color: #666;
+  }
+  .btn ul{
+    display: flex;
+  }
+}

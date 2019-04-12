@@ -21,4 +21,6 @@ export const moneyDetial: string;
 export const tip: string;
 export const productDetial: string;
 export const banner: string;
+export const trialTip: string;
+export const red: string;
 export const fixedBottom: string;

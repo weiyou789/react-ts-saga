@@ -169,6 +169,19 @@ $bg-color-title:        #f60;
     background: #E7E5E6;
   }
 
+  .trialTip{
+    padding: rem(30);
+    background: #E8E8E8;
+    p{
+      line-height: rem(34);
+      padding: rem(5) 0;
+      color: #666;
+    }
+    p.red{
+      color: #FF397E;
+    }
+  }
+
 
 }
 .fixedBottom{
