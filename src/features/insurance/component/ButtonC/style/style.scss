@@ -1,0 +1,14 @@
+@import '../../../../../styles/mixin';
+
+$bg-color-title:        #f60;
+
+
+.buttonC{
+  color:#fff;
+  height:rem(95);
+  background: #FF6EA2;
+  border-radius: rem(8);
+  text-align: center;
+  line-height: rem(90);
+  font-size: rem(32);
+}

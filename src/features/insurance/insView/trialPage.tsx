@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { DatePicker, List } from 'antd-mobile'
-import { LineButtonCom } from '../component'
+import { LineButtonCom, ButtonC } from '../component'
 import {
     INCREMENT_ENTHUSIASM
 } from '../redux/actionTypes'
@@ -42,10 +42,14 @@ class TrialPage extends React.Component<Props>{
         //console.log(index,select)
     }
 
+    public onBtnTap = (e)=>{
+        console.log(e)
+    }
+
     public render(){
         //const { demoData } = this.props
         //const {languageName,enthusiasmLevel} = demoData
-        const { onTap } = this;
+        const { onTap, onBtnTap } = this;
         console.log(this.state.citySelect)
          return(
             <div className={styles.insMain}>
@@ -94,10 +98,13 @@ class TrialPage extends React.Component<Props>{
                 >
                 </LineButtonCom>
 
+                <ButtonC
+                    btnText="开始测评"
+                    styleCus={{margin:'1.2rem auto 0',width:'5.6rem'}}
+                    onTapBtn={(e) => onBtnTap(e)}
+                >
 
-                <div className="bigbtn">
-
-                </div>
+                </ButtonC>
             </div>
         );
     }

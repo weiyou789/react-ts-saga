@@ -20,7 +20,7 @@ const lessLoader = {
 const typingsForCssModulesLoaderConf = {
     loader: 'typings-for-css-modules-loader',
     options: {
-        localIdentName: '[local]',
+        localIdentName: '[name]_[local]',
         modules: true,
         namedExport: true,
         camelCase: true,

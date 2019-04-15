@@ -13,6 +13,12 @@ export function dataToString(data) {
     return new URLSearchParams(array).toString();
 }
 /*
+* 宽度计算
+* */
+export function RemWidth(num) {
+    return num / 100 + 'rem';
+}
+/*
 * isString
 * */
 export function isString(object) {

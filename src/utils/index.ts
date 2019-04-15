@@ -20,6 +20,17 @@ export function dataToString(data: object){
     return new URLSearchParams(array).toString()
 }
 
+
+/*
+* 宽度计算
+* */
+
+
+
+export function RemWidth(num:number) {
+    return num/100+'rem'
+}
+
 /*
 * isString
 * */
