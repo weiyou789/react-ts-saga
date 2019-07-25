@@ -20,7 +20,7 @@ const lessLoader = {
 const typingsForCssModulesLoaderConf = {
     loader: 'typings-for-css-modules-loader',
     options: {
-        localIdentName: '[name]_[local]',
+        localIdentName: '[local]_[hash:base64:5]',
         modules: true,
         namedExport: true,
         camelCase: true,
@@ -52,10 +52,10 @@ module.exports = [
         test: /\.scss|.css$/,
         include: [resolve('src')],
         use: [
-            config.extractCss ? MiniCssExtractPlugin.loader : 'style-loader',
-            typingsForCssModulesLoaderConf,
-            sassLoader,
-            {loader: 'postcss-loader'}
+            config.extractCss ? MiniCssExtractPlugin.loader : 'style-loader',//生产环境采用此方式解耦CSS文件与js文件
+            typingsForCssModulesLoaderConf,//CSS-Modules,css模块化
+            sassLoader,//编译sass
+            {loader: 'postcss-loader'}//给css加前缀
         ]
     }
 ];
